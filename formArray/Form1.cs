@@ -23,7 +23,7 @@ namespace formArray
                     numbers[i] = 0;
                 }
             }
-
+             
             //int min,max;
             /*for(int i = 0; i < numbers.Length; i++)
             {
