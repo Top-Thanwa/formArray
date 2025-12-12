@@ -24,19 +24,19 @@ namespace formArray
                 }
             }
              
-            //int min,max;
-            /*for(int i = 0; i < numbers.Length; i++)
+            int min = 0,max = numbers[0];
+            for(int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] < numbers[i+1])
+                if (min < numbers[i])
                 {
-                    min = numbers[i+1];
+                    min = numbers[i];
                 }
 
-                if (numbers[i+1] > numbers[i])
+                if (max > numbers[i])
                 {
-                    max = numbers[i+1];
+                    max = numbers[i];
                 }
-            }*/
+            }
 
             int sum = 0;
             for (int i = 0; i < numbers.Length; i++)
@@ -50,8 +50,8 @@ namespace formArray
             lblCount.Text = "จำนวนสมาชิกข้อมูล : " + numbers.Length;
             lblSum.Text = "ผลรวม : " + sum;
             lblAgv.Text = "ค่าเฉลี่ย : " + average;
-            lblMax.Text = "ค่าสูงสุด : ";
-            lblMin.Text = "ค่าต่ำสุด : ";
+            lblMax.Text = "ค่าสูงสุด : " + max;
+            lblMin.Text = "ค่าต่ำสุด : " + min;
 
         }
 

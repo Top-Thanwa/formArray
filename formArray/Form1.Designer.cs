@@ -130,7 +130,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(663, 96);
+            button2.Location = new Point(627, 293);
             button2.Name = "button2";
             button2.Size = new Size(151, 49);
             button2.TabIndex = 8;
@@ -141,7 +141,7 @@
             // label2
             // 
             label2.BackColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(663, 165);
+            label2.Location = new Point(627, 345);
             label2.Name = "label2";
             label2.Size = new Size(377, 202);
             label2.TabIndex = 9;
