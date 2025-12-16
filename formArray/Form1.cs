@@ -65,7 +65,7 @@ namespace formArray
                 {"ภูริณัฐ","ทินนี่","อุดรธานี" },
                 {"อินทิรา","เอ็มมี่","หนองคาย" }
             };
-            
+
             int row = data.GetLength(0);
             int col = data.GetLength(1);
             string result = "";
@@ -77,6 +77,7 @@ namespace formArray
                 result += "จังหวัด " + data[i, 2] + "\n ";
             }
             label2.Text = result;
+
 
         }
 
@@ -94,7 +95,7 @@ namespace formArray
             int sumA = MyArr[0].Sum();
             int sumB = MyArr[1].Sum();
             int sumC = MyArr[2].Sum();
-            resultJagg = Convert.ToString(sumA) +"----end----\n"+ Convert.ToString(sumB) + 
+            resultJagg = Convert.ToString(sumA) + "----end----\n" + Convert.ToString(sumB) +
                 "----end----\n" + Convert.ToString(sumC) + "----end----\n";
             label3.Text = resultJagg;
 
@@ -104,10 +105,11 @@ namespace formArray
                 for(int j = 0; j < MyArr[i].GetLength(0); j++)
                 {
                     sumJagg += MyArr[i][j];
+                    resultJagg += Convert.ToString(MyArr[i][j]) + "+";
                 }
-                    resultJagg += Convert.ToString(sumJagg) + "----end----\n";
-                }
-                label3.Text = resultJagg;*/
+                resultJagg +=" = " + Convert.ToString(sumJagg) + " ----end----\n";
+            }
+            label3.Text = resultJagg;*/
 
         }
     }
