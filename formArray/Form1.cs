@@ -47,11 +47,11 @@ namespace formArray
             //double average = Convert.ToDouble(sum) / numbers.Length;
             double average = (double)sum / numbers.Length;
 
-             lblCount.Text = "จำนวนสมาชิกข้อมูล : " + numbers.Length;
-             lblSum.Text = "ผลรวม : " + sum;
-             lblAgv.Text = "ค่าเฉลี่ย : " + average;
-             lblMax.Text = "ค่าสูงสุด : " + max;
-             lblMin.Text = "ค่าต่ำสุด : " + min;
+            lblCount.Text = "จำนวนข้อมูล : " + numbers.Length;
+            lblSum.Text = "ผลรวม : " + sum;
+            lblAgv.Text = "ค่าเฉลี่ย : " + average;
+            lblMax.Text = "ค่าสูงสุด : " + max;
+            lblMin.Text = "ค่าต่ำสุด : " + min;
 
         }
 
@@ -59,28 +59,28 @@ namespace formArray
         {
             string[,] data = new string[5, 3]
             {
-                {"ธันวา","ท๊อป","หนองคาย" },
-                {"ณัฐภูมิ","น้อต","หนองคาย" },
-                {"วัชชิระ","สเน็ค","อุดรธานี" },
-                {"ภูริณัฐ","ทินนี่","อุดรธานี" },
+                {"ธันวา","ท๊อป","หนองคาย" },
+                {"ณัฐภูมื","น๊อต","หนองคาย" },
+                {"วัซซิระ","สเน็ค","อุดรธานี" },
+                {"ภูริณัฐ","ทินนี่","อุดรธานี" },
                 {"อินทิรา","เอ็มมี่","หนองคาย" }
-
+            };
+            
             int row = data.GetLength(0);
             int col = data.GetLength(1);
             string result = "";
             for (int i = 0; i < row; i++)
             {
                 result += "ข้อมูลที่ " + (i + 1) + " : ";
-                result += "ชื่อจริง " + data[i, 0] + ", ";
-                result += "ชื่อเล่น " + data[i, 1] + ", ";
+                result += "ชื่อจริง " + data[i, 0] + ", ";
+                result += "ชื่อเล่น " + data[i, 1] + ", ";
                 result += "จังหวัด " + data[i, 2] + "\n ";
             }
             label2.Text = result;
 
-
         }
 
-        //����� jagged array
+        //ผลรวม jagged array
         private void button3_Click(object sender, EventArgs e)
         {
             string resultJagg = "";
@@ -105,9 +105,9 @@ namespace formArray
                 {
                     sumJagg += MyArr[i][j];
                 }
-                resultJagg += Convert.ToString(sumJagg) + "----end----\n";
-            }
-            label3.Text = resultJagg;*/
+                    resultJagg += Convert.ToString(sumJagg) + "----end----\n";
+                }
+                label3.Text = resultJagg;*/
 
         }
     }
