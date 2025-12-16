@@ -23,9 +23,9 @@ namespace formArray
                     numbers[i] = 0;
                 }
             }
-             
-            int min = 0,max = numbers[0];
-            for(int i = 0; i < numbers.Length; i++)
+
+            int min = 0, max = numbers[0];
+            for (int i = 0; i < numbers.Length; i++)
             {
                 if (min < numbers[i])
                 {
@@ -69,7 +69,7 @@ namespace formArray
             int row = data.GetLength(0);
             int col = data.GetLength(1);
             string result = "";
-            for(int i = 0;i < row; i++)
+            for (int i = 0; i < row; i++)
             {
                 result += "ข้อมูลที่ " + (i + 1) + " : ";
                 result += "ชื่อจริง " + data[i, 0] + ", ";
@@ -77,6 +77,38 @@ namespace formArray
                 result += "จังหวัด " + data[i, 2] + "\n ";
             }
             label2.Text = result;
+
+
+        }
+
+        //ผลรวม jagged array
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string resultJagg = "";
+            int[][] MyArr = new int[][]
+            {
+                new int[] {1,3,5,7,9},
+                new int[] {0,2,4,6},
+                new int[] {11,22}
+            };
+
+            int sumA = MyArr[0].Sum();
+            int sumB = MyArr[1].Sum();
+            int sumC = MyArr[2].Sum();
+            resultJagg = Convert.ToString(sumA) +"----end----\n"+ Convert.ToString(sumB) + 
+                "----end----\n" + Convert.ToString(sumC) + "----end----\n";
+            label3.Text = resultJagg;
+
+            /*for(int i = 0; i < MyArr.GetLength(0); i++)
+            {
+                int sumJagg = 0;
+                for(int j = 0; j < MyArr[i].GetLength(0); j++)
+                {
+                    sumJagg += MyArr[i][j];
+                }
+                resultJagg += Convert.ToString(sumJagg) + "----end----\n";
+            }
+            label3.Text = resultJagg;*/
 
         }
     }

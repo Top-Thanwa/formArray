@@ -38,6 +38,8 @@
             lblMin = new Label();
             button2 = new Button();
             label2 = new Label();
+            button3 = new Button();
+            label3 = new Label();
             SuspendLayout();
             // 
             // textBox1
@@ -61,7 +63,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(341, 87);
+            button1.Location = new Point(325, 86);
             button1.Name = "button1";
             button1.Size = new Size(114, 58);
             button1.TabIndex = 2;
@@ -75,7 +77,7 @@
             lblCount.BackColor = SystemColors.ButtonFace;
             lblCount.BorderStyle = BorderStyle.FixedSingle;
             lblCount.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCount.Location = new Point(491, 82);
+            lblCount.Location = new Point(328, 165);
             lblCount.Name = "lblCount";
             lblCount.Size = new Size(111, 30);
             lblCount.TabIndex = 3;
@@ -88,7 +90,7 @@
             lblSum.BackColor = SystemColors.ButtonFace;
             lblSum.BorderStyle = BorderStyle.FixedSingle;
             lblSum.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSum.Location = new Point(491, 125);
+            lblSum.Location = new Point(328, 204);
             lblSum.Name = "lblSum";
             lblSum.Size = new Size(66, 30);
             lblSum.TabIndex = 4;
@@ -100,7 +102,7 @@
             lblAgv.BackColor = SystemColors.ButtonFace;
             lblAgv.BorderStyle = BorderStyle.FixedSingle;
             lblAgv.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblAgv.Location = new Point(491, 165);
+            lblAgv.Location = new Point(328, 243);
             lblAgv.Name = "lblAgv";
             lblAgv.Size = new Size(73, 30);
             lblAgv.TabIndex = 5;
@@ -111,7 +113,7 @@
             lblMax.AutoSize = true;
             lblMax.BackColor = SystemColors.ButtonFace;
             lblMax.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMax.Location = new Point(491, 204);
+            lblMax.Location = new Point(328, 284);
             lblMax.Name = "lblMax";
             lblMax.Size = new Size(75, 28);
             lblMax.TabIndex = 6;
@@ -122,7 +124,7 @@
             lblMin.AutoSize = true;
             lblMin.BackColor = SystemColors.ButtonFace;
             lblMin.Font = new Font("Leelawadee UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMin.Location = new Point(491, 245);
+            lblMin.Location = new Point(328, 323);
             lblMin.Name = "lblMin";
             lblMin.Size = new Size(77, 28);
             lblMin.TabIndex = 7;
@@ -130,7 +132,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(627, 293);
+            button2.Location = new Point(542, 347);
             button2.Name = "button2";
             button2.Size = new Size(151, 49);
             button2.TabIndex = 8;
@@ -141,10 +143,28 @@
             // label2
             // 
             label2.BackColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(627, 345);
+            label2.Location = new Point(542, 399);
             label2.Name = "label2";
-            label2.Size = new Size(377, 202);
+            label2.Size = new Size(371, 157);
             label2.TabIndex = 9;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(555, 86);
+            button3.Name = "button3";
+            button3.Size = new Size(192, 44);
+            button3.TabIndex = 10;
+            button3.Text = "ผลรวม jagged array";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label3
+            // 
+            label3.BackColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(555, 133);
+            label3.Name = "label3";
+            label3.Size = new Size(311, 140);
+            label3.TabIndex = 11;
             // 
             // Form1
             // 
@@ -152,6 +172,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1078, 576);
+            Controls.Add(label3);
+            Controls.Add(button3);
             Controls.Add(label2);
             Controls.Add(button2);
             Controls.Add(lblMin);
@@ -180,5 +202,7 @@
         private Label lblMin;
         private Button button2;
         private Label label2;
+        private Button button3;
+        private Label label3;
     }
 }
